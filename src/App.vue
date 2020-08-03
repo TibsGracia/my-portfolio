@@ -1,15 +1,33 @@
 <template>
   <v-app id="app">
     <!-- <v-toolbar dark absolute app color="transparent"> -->
-    <v-app-bar color="black" dark app>
+    <v-app-bar color="black" dark app v-if="$route.name!=='Home'">
       <v-toolbar-title>Mary Grace Tiburillo</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn  to="/" text>Home</v-btn>
-      <v-btn  to="/about" text>About</v-btn>
+      <v-btn to="/" text>Home</v-btn>
+      <v-btn to="/about" text>About</v-btn>
       <v-btn to="/my-works" text>Works</v-btn>
       <v-btn to="/resume" text>Resume</v-btn>
       <v-btn to="/contact" text>Contact</v-btn>
     </v-app-bar>
+    <v-footer dark padless app absolute>
+      <v-card class="flex" flat tile>
+        <v-card-title class="black">
+          <div class="body-1">Get connected with us on social networks!</div>
+
+          <v-spacer></v-spacer>
+
+          <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
+            <v-icon size="24px">{{ icon }}</v-icon>
+          </v-btn>
+        </v-card-title>
+
+        <v-card-text class="py-2 black--text text-center grey">
+          {{ new Date().getFullYear() }} —
+          <strong>Vuetify</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
     <!-- <v-toolbar color="transparent" dense>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
@@ -22,7 +40,9 @@
     </v-toolbar>-->
     <v-main>
       <!-- <v-container fluid> -->
-      <router-view></router-view>
+      <vue-page-transition name="fade-in-right">
+        <router-view></router-view>
+      </vue-page-transition>
       <!-- </v-container> -->
     </v-main>
   </v-app>
@@ -34,7 +54,8 @@ export default {
   components: {},
 
   data: () => ({
-    title: "Tiburillo"
+    title: "Tiburillo",
+    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"]
   })
 };
 </script>

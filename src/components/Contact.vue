@@ -1,4 +1,4 @@
-<template>
+  <template>
   <section id="get-in-touch" class="hide-overflow">
     <v-layout teal lighten-3 white--text>
       <v-flex hidden-sm-and-down md6>
@@ -9,9 +9,7 @@
         <heading class="mb-5">Get In Touch</heading>
         <v-sheet max-width="600" class="pa-5 rounded mb-12 mx-auto">
           <mytext class="mb-10">
-            Lorem ipsum dolor sit amet, consectetur adipi
-            <br>scin elit. Etiam vulputate augue vel felis gravida
-            <br>porta. Lorem ipsum dolor sit amet.
+           This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.
           </mytext>
 
           <v-list class="transparent">

@@ -1,21 +1,18 @@
 <template>
   <section id="about" class="hide-overflow">
     <v-layout white>
-      <v-flex xs12 md6 pa-5>
+      <v-flex xs12 md7 pa-5>
         <bubble1 style="transform: translate(5%, -5%)"/>
         <heading class="teal--text text--darken-2">About Me</heading>
 
-        <mytext class="mb-10">
-          Lorem ipsum dolor sit amet, consectetur adipi
-          <br>scin elit. Etiam vulputate augue vel felis gravida
-          <br>porta. Lorem ipsum dolor sit amet.
-        </mytext>
+        <mytext
+          class="mb-10"
+        >This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.</mytext>
 
         <subheading class="teal--text text--darken-2">Skills</subheading>
-        <mytext class="mb-5">
-          Lorem ipsum dolor sit amet, consecte tur adipi scin e
-          <br>lit. Etiam vulputate augu e vel felis gravida porta.
-        </mytext>
+        <mytext
+          class="mb-5"
+        >This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.</mytext>
         <v-card flat class="mb-5">
           <div class="teal--text text--darken-2">Front-end</div>
           <v-chip
@@ -49,16 +46,20 @@
             text-color="white"
           >{{skill}}</v-chip>
         </v-card>
-        <!-- <v-alert outlined color="grey">
-          <v-layout v-for="(skill, i) in skills" :key="i" style="color: #69A1BB;" wrap>
-            <v-flex xs6 text-uppercase v-text="skill.name"/>
-            <v-flex xs6 text-xs-right v-text="`${skill.value}%`"/>
-            <v-progress-linear :value="skill.value" color="info" height="8"/>
-          </v-layout>
-        </v-alert>-->
+        <v-card flat class="mb-5">
+          <div class="teal--text text--darken-2">Tools</div>
+          <v-chip
+            class="ma-2"
+            v-for="(skill, i) in tools"
+            :key="i"
+            color="teal darken-4"
+            label
+            text-color="white"
+          >{{skill}}</v-chip>
+        </v-card>
       </v-flex>
-      <v-flex hidden-sm-and-down md6>
-        <v-img :src="require('@/assets/about1.jpg')" height="100%"/>
+      <v-flex hidden-sm-and-down md5>
+        <v-img class="layer" :src="require('@/assets/coding.jpg')" height="100%"/>
       </v-flex>
     </v-layout>
   </section>
@@ -79,9 +80,19 @@ export default {
     mytext
   },
   data: () => ({
-    frontend: ["Vue Js", "Angular 2", "Html", "CSS", "JavaScript","Vuetify", "Bootstrap"],
+    frontend: [
+      "Vue Js",
+      "Angular 2",
+      "Html",
+      "CSS",
+      "JavaScript",
+      "Vuetify",
+      "Bootstrap"
+    ],
     backend: ["Node Js", "Express 2", "php"],
-    database: ["MongoDB", "MySQL"]
+    database: ["MongoDB", "MySQL"],
+    tools: ["GitHub", "BitBucket", "Visual Studio", "Net Beans"]
   })
 };
 </script>
+

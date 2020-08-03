@@ -15,10 +15,10 @@
           <span></span>
         </span>
         <div class="nav-right nav-menu" v-bind:class="{ 'is-active': isActive }">
-          <router-link class="nav-item" v-bind:to="'/'">
+          <router-link class="nav-item" to="/">
             Portfolio
           </router-link>
-          <router-link class="nav-item" v-bind:to="'/resume'">
+          <router-link class="nav-item" to="/resume">
             Resume
           </router-link>
           <a class="nav-item">
