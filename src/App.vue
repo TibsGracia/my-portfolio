@@ -4,11 +4,17 @@
     <v-app-bar color="black" dark app v-if="$route.name!=='Home'">
       <v-toolbar-title>Mary Grace Tiburillo</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn to="/" text>Home</v-btn>
-      <v-btn to="/about" text>About</v-btn>
-      <v-btn to="/my-works" text>Works</v-btn>
-      <v-btn to="/resume" text>Resume</v-btn>
-      <v-btn to="/contact" text>Contact</v-btn>
+      <v-toolbar-items>
+        <v-btn to="/" text>Home</v-btn>
+        <v-divider vertical></v-divider>
+        <v-btn to="/about" text>About</v-btn>
+        <v-divider vertical></v-divider>
+        <v-btn to="/my-works" text>Works</v-btn>
+        <v-divider vertical></v-divider>
+        <v-btn to="/resume" text>Resume</v-btn>
+        <v-divider vertical></v-divider>
+        <v-btn to="/contact" text>Contact</v-btn>
+      </v-toolbar-items>
     </v-app-bar>
     <v-footer dark padless app absolute>
       <v-card class="flex" flat tile>
@@ -17,8 +23,16 @@
 
           <v-spacer></v-spacer>
 
-          <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
-            <v-icon size="24px">{{ icon }}</v-icon>
+          <v-btn
+            :href="socialMedia.link"
+            target="_blank"
+            v-for="socialMedia in socialMedias"
+            :key="socialMedia.link"
+            class="mx-4"
+            dark
+            icon
+          >
+            <v-icon size="24px">{{ socialMedia.icon }}</v-icon>
           </v-btn>
         </v-card-title>
 
@@ -55,7 +69,24 @@ export default {
 
   data: () => ({
     title: "Tiburillo",
-    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"]
+    socialMedias: [
+      {
+        icon: "mdi-facebook",
+        link: "https://m.facebook.com/grace.tiburillo"
+      },
+      // {
+      //   icon: "mdi-google-plus",
+      //   link: "https://ph.linkedin.com/in/mary-grace-tiburillo-b60738"
+      // },
+      {
+        icon: "mdi-linkedin",
+        link: "https://ph.linkedin.com/in/mary-grace-tiburillo-b60738195"
+      },
+      // {
+      //   icon: "mdi-instagram",
+      //   link: "https://ph.linkedin.com/in/mary-grace-tiburillo-b6073819"
+      // }
+    ]
   })
 };
 </script>

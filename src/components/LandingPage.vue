@@ -7,10 +7,17 @@
       >
         <v-layout column align-center justify-center class="white--text">
           <!-- <img src="@/assets/vuetify.png" alt="Vuetify.js" height="200"> -->
-          <h1 class="white--text mb-2 display-1">Hi Everyone!</h1>
-          <h1 class="white--text mb-2 display-2">I'm Mary Grace C. Tiburillo</h1>
-          <h3 class="white--text mb-2">Software Developer</h3>
-          <v-btn class="mt-12" color="teal lighten-4" large to="/about">Know more about me</v-btn>
+          <!-- <h1 class="white--text mb-2 display-1">Hi Everyone!</h1> -->
+          <h1 class="white--text mb-2 display-2">Mary Grace C. Tiburillo</h1>
+          <h3 class="white--text mb-2 overline font-weight-light">Software Developer</h3>
+          <v-btn
+            class="mt-12"
+            color="teal darken-1"
+            rounded
+            dark
+            large
+            to="/about"
+          >Know more about me</v-btn>
 
           <!-- <div class="subheading mb-4 text-center">Software Developer</div> -->
           <!-- <v-btn class="mt-12" color="blue lighten-2" dark large href="/pre-made-themes">Get Started</v-btn> -->
@@ -31,7 +38,7 @@
       <v-container grid-list-xl>
         <v-layout row wrap align-center class="my-5">
           <v-flex xs12 md6>
-            <v-card  class="btn transparent mx-auto" flat max-width="500" >
+            <v-card class="btn transparent mx-auto" flat max-width="500">
               <v-card max-width="500" class="transparent">
                 <v-img src="@/assets/jpm.jpg"></v-img>
               </v-card>
@@ -39,13 +46,13 @@
           </v-flex>
           <v-flex xs12 md6>
             <v-card flat class="transparent">
-              <v-card-text class="text-center"></v-card-text>
-              <v-card-title primary-title class="layout justify-center">
-                <div class="headline text-center">Introduction</div>
+              <!-- <v-card-text class="text-center"></v-card-text> -->
+              <v-card-title primary-title class="layout">
+                <div class="display-4 text-center font-weight-light">Hello!</div>
               </v-card-title>
-              <v-card-text
-                class="text-center"
-              >This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.</v-card-text>
+              <div
+                class="body-1 font-weight-light text-justify"
+              >My name is Mary Grace Tiburillo currently based in Cebu City. I am a Software Developer eager to learn new things and explore the world of IT. I am willing to take any challenges and opportunities. I enjoy building anything from small business websites to interactive web applications.</div>
             </v-card>
           </v-flex>
         </v-layout>
@@ -57,84 +64,26 @@
     <section>
       <v-parallax src="@/assets/code.jpg" height="380">
         <v-layout column align-center justify-center>
-          <div class="bottomText pa-10">
-            <div class="headline white--text mb-4 text-center">Web development has never been easy</div>
+          <div class="bottomText px-10 rounded-lg">
+            <div class="text-center">
+              <v-icon size="100" color="white">mdi-format-quote-close</v-icon>
+            </div>
+            <div
+              class="headline font-weight-thin white--text mb-4 text-center"
+            >Surround yourself with people who challenge you, teach you and push you to be your best self.</div>
+            <br>
+            <p class="font-italic text-right">- Bill Gates</p>
             <!-- <em>Kick-start your application today</em> -->
           </div>
         </v-layout>
       </v-parallax>
     </section>
-    <!-- <section>
-    <v-container grid-list-xl>
-      <v-layout row wrap justify-center class="my-12">
-        <v-flex xs12 sm4>
-          <v-card flat class="transparent">
-            <v-card-title primary-title class="layout justify-center">
-              <div class="headline">Company info</div>
-            </v-card-title>
-            <v-card-text>
-              Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-              Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-            </v-card-text>
-          </v-card>
-        </v-flex>
-        <v-flex xs12 sm4 offset-sm1>
-          <v-card flat class="transparent">
-            <v-card-title primary-title class="layout justify-center">
-              <div class="headline">Contact us</div>
-            </v-card-title>
-            <v-card-text>Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.</v-card-text>
-            <v-list class="transparent">
-              <v-list-item>
-                <v-list-item-action>
-                  <v-icon class="blue--text text--lighten-2">mdi-phone</v-icon>
-                </v-list-item-action>
-                <v-list-item-content>
-                  <v-list-item-title>777-867-5309</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-action>
-                  <v-icon class="blue--text text--lighten-2">mdi-map-marker</v-icon>
-                </v-list-item-action>
-                <v-list-item-content>
-                  <v-list-item-title>Chicago, US</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-action>
-                  <v-icon class="blue--text text--lighten-2">mdi-email</v-icon>
-                </v-list-item-action>
-                <v-list-item-content>
-                  <v-list-item-title>john@vuetifyjs.com</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-container>
-    </section>-->
-
-    <!-- <v-footer color="blue darken-2">
-    <v-layout row wrap align-center>
-      <v-flex xs12>
-        <div class="white--text ml-4">
-          Made with
-          <v-icon class="red--text">mdi-heart</v-icon>by
-          <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>
-          and
-          <a class="white--text" href="https://github.com/vwxyzjn">Costa Huang</a>
-        </div>
-      </v-flex>
-    </v-layout>
-    </v-footer>-->
   </div>
 </template>
 <style>
 .bottomText {
   background-color: rgba(0, 202, 135, 0.596);
+  width: 50%;
 }
 </style>
 <style lang="scss">

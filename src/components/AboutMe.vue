@@ -1,18 +1,16 @@
 <template>
   <section id="about" class="hide-overflow">
     <v-layout white>
-      <v-flex xs12 md7 pa-5>
+      <v-flex xs12 md7 pa-7>
         <bubble1 style="transform: translate(5%, -5%)"/>
         <heading class="teal--text text--darken-2">About Me</heading>
 
-        <mytext
-          class="mb-10"
-        >This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.</mytext>
+        <mytext class="mb-10"></mytext>
 
         <subheading class="teal--text text--darken-2">Skills</subheading>
-        <mytext
-          class="mb-5"
-        >This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.</mytext>
+        <div
+          class="body-1 font-weight-light text-justify mb-10"
+        >I have a diverse set of skills, ranging from web design including the front-end, all the way to its functionalities.</div>
         <v-card flat class="mb-5">
           <div class="teal--text text--darken-2">Front-end</div>
           <v-chip

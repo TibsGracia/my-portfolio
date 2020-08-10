@@ -8,9 +8,9 @@
         <bubble1/>
         <heading class="mb-5">Get In Touch</heading>
         <v-sheet max-width="600" class="pa-5 rounded mb-12 mx-auto">
-          <mytext class="mb-10">
-           This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.
-          </mytext>
+          <!-- <mytext
+            class="mb-10"
+          >This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.</mytext> -->
 
           <v-list class="transparent">
             <v-list-item class="ma-5">
@@ -45,30 +45,107 @@
         </v-sheet>
         <heading class="mb-5">Mail us your Message</heading>
         <v-sheet max-width="600" color="transparent" class="mx-auto">
-          <v-text-field color="info" label="Name" solo flat/>
-          <v-text-field color="info" label="Email" solo flat/>
-          <v-text-field color="info" label="Subject" solo flat/>
-          <v-textarea color="info" label="Message" solo flat/>
-          <mybtn>Send</mybtn>
+          <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="submit">
+            <v-text-field
+              v-model="name"
+              color="info"
+              :counter="10"
+              :rules="nameRules"
+              label="Name"
+              required
+              solo
+              flat
+            />
+            <v-text-field
+              v-model="email"
+              color="info"
+              :rules="emailRules"
+              label="Email"
+              required
+              solo
+              flat
+            />
+            <!-- <v-text-field v-model="subject" color="info" label="Subject" solo flat/> -->
+            <v-textarea
+              v-model="message"
+              color="info"
+              :rules="messageRules"
+              required
+              label="Message"
+              solo
+              flat
+            />
+            <v-btn type="submit">Send</v-btn>
+          </v-form>
+          <!-- <mybtn @click="submit()">Send</mybtn> -->
         </v-sheet>
       </v-flex>
     </v-layout>
   </section>
 </template>
 <script>
+import emailjs from "emailjs-com";
 import bubble1 from "@/components/base/Bubble1.vue";
 import heading from "@/components/base/Heading";
-import mybtn from "@/components/base/Btn";
-import mytext from "@/components/base/Text";
+// import mybtn from "@/components/base/Btn";
+// import mytext from "@/components/base/Text";
 
 export default {
   name: "about",
   components: {
     bubble1,
     heading,
-    mybtn,
-    mytext
+
   },
-  data: () => ({})
+  data: () => ({
+    valid: true,
+    name: "",
+    nameRules: [
+      v => !!v || "Name is required",
+      v => (v && v.length <= 10) || "Name must be less than 10 characters"
+    ],
+    email: "",
+    emailRules: [
+      v => !!v || "E-mail is required",
+      v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+    ],
+    messageRules: [v => !!v || "Message is required"],
+    subject: null,
+    message: null
+  }),
+  mounted() {
+    this.$nextTick(function() {
+      let emailJSscript = document.createElement("script");
+      emailJSscript.setAttribute(
+        "src",
+        "https://cdn.jsdelivr.net/npm/emailjs-com@2.6.3/dist/email.min.js"
+      );
+      document.head.appendChild(emailJSscript);
+    });
+  },
+  methods: {
+    submit() {
+      let user_id = "user_2HKZFfDNfuJuGmZ8kfmzO";
+      console.log("submit");
+      // if(this.Email !== null && this.Fullname !== null && this.Subject !== null && this.Message !== null){
+      // emailjs.init("user_J6yQtb4Bs4JEJlHLEfhzi");
+      emailjs
+        .send(
+          "gmail",
+          "template_qki9qefR",
+          {
+            from_name: this.name,
+            message_html: this.message,
+            from_email: this.email
+          },
+          user_id
+        )
+        .then(() => {
+          this.snackbar = true;
+        });
+      this.$refs.form.reset();
+      // }
+    }
+  }
 };
 </script>
