@@ -7,9 +7,6 @@
          <div
           class="body-1 font-weight-light text-justify mb-10"
         >I am a Software Developer and specializes front-end development. I enjoy taking complex problem and make it into simple and user-friendly web application. </div>
-         <div
-          class="body-1 font-weight-light text-justify mb-10"
-        >The </div>
         <div class="teal--text text--darken-2 display-1 my-5 font-weight-light">Skills</div>
         <div
           class="body-1 font-weight-light text-justify mb-10"

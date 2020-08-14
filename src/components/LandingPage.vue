@@ -44,27 +44,25 @@
     <section>
       <v-parallax src="@/assets/code.jpg" height="380">
         <v-layout column align-center justify-center>
-          <div class="bottomText px-10 rounded-lg">
+          <v-card color="transparent" class="px-10" max-width="600">
             <div class="text-center">
               <v-icon size="100" color="white">mdi-format-quote-close</v-icon>
             </div>
-            <div
+            <!-- <p
               class="headline font-weight-thin white--text mb-4 text-center"
-            >Surround yourself with people who challenge you, teach you and push you to be your best self.</div>
+            >Surround yourself with people who challenge you, teach you and push you to be your best self.</p> -->
+             <p
+              class="headline font-weight-thin white--text mb-4 text-center"
+            >Keep exploring and keep learning. Don't be afraid to discover things behind the horizon.</p>
             <br>
-            <p class="font-italic text-right">- Bill Gates</p>
-          </div>
+            <!-- <p class="font-italic white--text text-right">- Bill Gates</p> -->
+          </v-card>
         </v-layout>
       </v-parallax>
     </section>
   </div>
 </template>
-<style>
-.bottomText {
-  background-color: rgba(0, 202, 135, 0.596);
-  width: 50%;
-}
-</style>
+
 <style lang="scss">
 .btn {
   cursor: pointer;
