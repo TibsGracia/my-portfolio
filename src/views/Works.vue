@@ -1,7 +1,6 @@
 <template>
-  <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
   <div>
-    <div class="teal--text text--darken-2 my-5 text-center font-weight-light">My Works</div>
+    <div class="teal--text text--darken-2 my-5 text-center font-weight-light">Projects</div>
     <v-row>
       <Works v-for="work in works" :key="work.title" :data="work"/>
     </v-row>
@@ -9,7 +8,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Works from "@/components/Works.vue";
 
 export default {

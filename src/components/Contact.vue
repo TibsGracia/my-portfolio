@@ -6,19 +6,15 @@
       </v-flex>
       <v-flex xs12 md6 pa-5>
         <bubble1/>
-        <heading class="mb-5">Get In Touch</heading>
+        <div class="white--text text--darken-2 my-5 font-weight-light">Get In Touch</div>
         <v-sheet max-width="600" class="pa-5 rounded mb-12 mx-auto">
-          <!-- <mytext
-            class="mb-10"
-          >This is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test this is a test.</mytext> -->
-
           <v-list class="transparent">
             <v-list-item class="ma-5">
               <v-list-item-action>
                 <v-icon class="grey--text text--darken-2">mdi-phone</v-icon>
               </v-list-item-action>
               <v-list-item-content>
-                <v-list-item-title>09773972032 (TM)</v-list-item-title>
+                <v-list-item-title>09773672032 (TM)</v-list-item-title>
                 <v-list-item-title>09104885592 (TNT)</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
@@ -43,7 +39,10 @@
             </v-list-item>
           </v-list>
         </v-sheet>
-        <heading class="mb-5">Mail us your Message</heading>
+        <div
+          class="white--text text--darken-2 my-5 display-1 font-weight-light"
+        >Mail us your Message</div>
+
         <v-sheet max-width="600" color="transparent" class="mx-auto">
           <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="submit">
             <v-text-field
@@ -65,7 +64,6 @@
               solo
               flat
             />
-            <!-- <v-text-field v-model="subject" color="info" label="Subject" solo flat/> -->
             <v-textarea
               v-model="message"
               color="info"
@@ -77,7 +75,6 @@
             />
             <v-btn type="submit">Send</v-btn>
           </v-form>
-          <!-- <mybtn @click="submit()">Send</mybtn> -->
         </v-sheet>
       </v-flex>
     </v-layout>
@@ -86,16 +83,11 @@
 <script>
 import emailjs from "emailjs-com";
 import bubble1 from "@/components/base/Bubble1.vue";
-import heading from "@/components/base/Heading";
-// import mybtn from "@/components/base/Btn";
-// import mytext from "@/components/base/Text";
 
 export default {
   name: "about",
   components: {
-    bubble1,
-    heading,
-
+    bubble1
   },
   data: () => ({
     valid: true,
@@ -127,8 +119,6 @@ export default {
     submit() {
       let user_id = "user_2HKZFfDNfuJuGmZ8kfmzO";
       console.log("submit");
-      // if(this.Email !== null && this.Fullname !== null && this.Subject !== null && this.Message !== null){
-      // emailjs.init("user_J6yQtb4Bs4JEJlHLEfhzi");
       emailjs
         .send(
           "gmail",
@@ -144,7 +134,6 @@ export default {
           this.snackbar = true;
         });
       this.$refs.form.reset();
-      // }
     }
   }
 };

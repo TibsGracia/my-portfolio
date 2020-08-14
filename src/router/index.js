@@ -5,7 +5,6 @@ import About from "../views/About.vue";
 import MyWorks from "../views/Works.vue";
 import Resume from "../views/Resume.vue";
 import Contact from "../views/Contact.vue";
-// import Project from '@/components/Home'
 
 Vue.use(VueRouter);
 
@@ -15,11 +14,6 @@ const routes = [
     name: "Home",
     component: Home
   },
-  // {
-  //   path: "/projects/:projectId",
-  //   component: Project,
-  //   name: "project_component"
-  // },
   {
     path: "/my-works",
     name: "MyWorks",

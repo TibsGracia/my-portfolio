@@ -1,18 +1,16 @@
 <template>
   <v-col cols="4">
-    <v-hover  v-slot:default="{ hover }">
+    <v-hover v-slot:default="{ hover }">
       <v-card :loading="loading" class="mx-auto my-5" max-width="374" :elevation="hover ? 16 : 2">
         <v-img height="250" :src="data.image"></v-img>
         <v-card-title>{{data.title}}</v-card-title>
         <v-card-text>
           <div>{{data.description}}</div>
         </v-card-text>
-
         <v-divider class="mx-4"></v-divider>
         <v-card-title>
           <div class="body-1 font-weight-medium">Technology Used</div>
         </v-card-title>
-
         <v-card-text>
           <v-chip-group column>
             <v-chip
@@ -22,11 +20,6 @@
             >{{technology}}</v-chip>
           </v-chip-group>
         </v-card-text>
-
-        <!-- <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="teal darken-2" outlined text @click="reserve">Explore</v-btn>
-        </v-card-actions> -->
       </v-card>
     </v-hover>
   </v-col>
@@ -39,11 +32,9 @@ export default {
     loading: false,
     selection: 1
   }),
-
   methods: {
     reserve() {
       this.loading = true;
-
       setTimeout(() => (this.loading = false), 2000);
     }
   }

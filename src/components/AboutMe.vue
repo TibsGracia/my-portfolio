@@ -3,11 +3,14 @@
     <v-layout white>
       <v-flex xs12 md7 pa-7>
         <bubble1 style="transform: translate(5%, -5%)"/>
-        <heading class="teal--text text--darken-2">About Me</heading>
-
-        <mytext class="mb-10"></mytext>
-
-        <subheading class="teal--text text--darken-2">Skills</subheading>
+        <div class="teal--text text--darken-2 my-5 font-weight-light">About Me</div>
+         <div
+          class="body-1 font-weight-light text-justify mb-10"
+        >I am a Software Developer and specializes front-end development. I enjoy taking complex problem and make it into simple and user-friendly web application. </div>
+         <div
+          class="body-1 font-weight-light text-justify mb-10"
+        >The </div>
+        <div class="teal--text text--darken-2 display-1 my-5 font-weight-light">Skills</div>
         <div
           class="body-1 font-weight-light text-justify mb-10"
         >I have a diverse set of skills, ranging from web design including the front-end, all the way to its functionalities.</div>
@@ -65,17 +68,11 @@
 
 <script>
 import bubble1 from "@/components/base/Bubble1.vue";
-import heading from "@/components/base/Heading";
-import subheading from "@/components/base/Subheading";
-import mytext from "@/components/base/Text";
 
 export default {
   name: "about",
   components: {
-    bubble1,
-    heading,
-    subheading,
-    mytext
+    bubble1
   },
   data: () => ({
     frontend: [

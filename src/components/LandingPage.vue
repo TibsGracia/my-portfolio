@@ -1,13 +1,8 @@
 <template>
   <div>
     <section>
-      <v-parallax
-        src="https://free4kwallpapers.com/uploads/originals/2015/10/27/minimalist--wallpaper.jpg"
-        height="500"
-      >
+      <v-parallax src="@/assets/hero3.jpg" height="500">
         <v-layout column align-center justify-center class="white--text">
-          <!-- <img src="@/assets/vuetify.png" alt="Vuetify.js" height="200"> -->
-          <!-- <h1 class="white--text mb-2 display-1">Hi Everyone!</h1> -->
           <h1 class="white--text mb-2 display-2">Mary Grace C. Tiburillo</h1>
           <h3 class="white--text mb-2 overline font-weight-light">Software Developer</h3>
           <v-btn
@@ -18,23 +13,11 @@
             large
             to="/about"
           >Know more about me</v-btn>
-
-          <!-- <div class="subheading mb-4 text-center">Software Developer</div> -->
-          <!-- <v-btn class="mt-12" color="blue lighten-2" dark large href="/pre-made-themes">Get Started</v-btn> -->
         </v-layout>
       </v-parallax>
     </section>
 
     <section>
-      <!-- <v-layout column wrap class="my-5" align-center> -->
-      <!-- <v-flex xs12 sm4 class="my-4">
-          <div class="text-center">
-            <h2 class="headline">The best way to start developing</h2>
-            <span class="subheading">This is a test this is a test</span>
-          </div>
-      </v-flex>-->
-      <!-- <v-flex xs12> -->
-
       <v-container grid-list-xl>
         <v-layout row wrap align-center class="my-5">
           <v-flex xs12 md6>
@@ -46,7 +29,6 @@
           </v-flex>
           <v-flex xs12 md6>
             <v-card flat class="transparent">
-              <!-- <v-card-text class="text-center"></v-card-text> -->
               <v-card-title primary-title class="layout">
                 <div class="display-4 text-center font-weight-light">Hello!</div>
               </v-card-title>
@@ -57,8 +39,6 @@
           </v-flex>
         </v-layout>
       </v-container>
-      <!-- </v-flex>
-      </v-layout>-->
     </section>
 
     <section>
@@ -73,7 +53,6 @@
             >Surround yourself with people who challenge you, teach you and push you to be your best self.</div>
             <br>
             <p class="font-italic text-right">- Bill Gates</p>
-            <!-- <em>Kick-start your application today</em> -->
           </div>
         </v-layout>
       </v-parallax>
@@ -124,17 +103,9 @@
     &:after {
       width: 100%;
       height: 100%;
-      // border-color:white;
     }
   }
 }
-
-// .data-container {
-//   background: #ffebee;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
 </style>
 
 
