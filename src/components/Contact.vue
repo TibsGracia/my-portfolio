@@ -7,43 +7,43 @@
       <v-flex xs12 md6 pa-5>
         <bubble1/>
         <div class="white--text text--darken-2 my-5 font-weight-light">Get In Touch</div>
-        <v-sheet max-width="600" class="pa-5 rounded mb-12 mx-auto">
+        <v-card max-width="600" class="pa-5 rounded mb-12 mx-auto">
           <v-list class="transparent">
-            <v-list-item class="ma-5">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon class="grey--text text--darken-2">mdi-phone</v-icon>
               </v-list-item-action>
               <v-list-item-content>
-                <v-list-item-title>09773672032 (TM)</v-list-item-title>
-                <v-list-item-title>09104885592 (TNT)</v-list-item-title>
+                <p class="mb-3">09773672032 (TM)</p>
+                <p>09104885592 (TNT)</p>
               </v-list-item-content>
             </v-list-item>
             <v-divider></v-divider>
-            <v-list-item class="ma-5">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon dark medium class="grey--text text--darken-2">mdi-map-marker</v-icon>
               </v-list-item-action>
               <v-list-item-content>
-                <v-list-item-title>Nasipit Road, Talamban, Cebu City</v-list-item-title>
-                <v-list-item-title>San Alberto Carmelites Formation Center</v-list-item-title>
+                <p class="mb-3">Nasipit Road, Talamban, Cebu City</p>
+                <p>San Alberto Carmelites Formation Center</p>
               </v-list-item-content>
             </v-list-item>
             <v-divider></v-divider>
-            <v-list-item class="ma-5">
+            <v-list-item>
               <v-list-item-action>
                 <v-icon class="grey--text text--darken-2">mdi-email</v-icon>
               </v-list-item-action>
               <v-list-item-content>
-                <v-list-item-title>marygracetiburillo@gmail.com</v-list-item-title>
+                <p>marygracetiburillo@gmail.com</p>
               </v-list-item-content>
             </v-list-item>
           </v-list>
-        </v-sheet>
+        </v-card>
         <div
           class="white--text text--darken-2 my-5 display-1 font-weight-light"
-        >Mail us your Message</div>
+        >E-Mail to me your message</div>
 
-        <v-sheet max-width="600" color="transparent" class="mx-auto">
+        <v-card max-width="600" outlined color="transparent" class="mx-auto">
           <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="submit">
             <v-text-field
               v-model="name"
@@ -75,7 +75,7 @@
             />
             <v-btn type="submit">Send</v-btn>
           </v-form>
-        </v-sheet>
+        </v-card>
       </v-flex>
     </v-layout>
   </section>

@@ -6,20 +6,16 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn v-for="item in data" :key="item.title" :to="item.link" text>{{item.title}}</v-btn>
-        <!-- <v-btn to="/about" text>About</v-btn>
-        <v-btn to="/my-works" text>Works</v-btn>
-        <v-btn to="/resume" text>Resume</v-btn>
-        <v-btn to="/contact" text>Contact</v-btn>-->
       </v-toolbar-items>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" temporary absolute id="drawer">
+    <v-navigation-drawer v-model="drawer"  temporary clipped fixed id="drawer">
       <v-list nav dense>
             <div class="mb-4 text-center">
           <img :width="70" src="@/assets/logo4.png">
           <h3>Mary Grace Tiburillo</h3>
         </div>
         <v-divider></v-divider>
-        <v-list-item-group v-model="group" active-class="teal--text text--accent-4">
+        <v-list-item-group v-model="group" active-class="light-blue--text text--accent-4">
           <v-list-item v-for="item in data" :key="item.title" :to="item.link">
              <v-list-item-action>
               <v-icon>{{item.icon}}</v-icon>

@@ -2,21 +2,22 @@
   <v-footer dark padless app absolute>
     <v-card class="flex" flat tile>
       <v-card-title class="black">
-        <div class="body-1">Get connected with us on social networks!</div>
+        <div class="body-1">Get connected with me on social networks!</div>
 
         <v-spacer></v-spacer>
-
-        <v-btn
-          :href="socialMedia.link"
-          target="_blank"
-          v-for="socialMedia in socialMedias"
-          :key="socialMedia.link"
-          class="mx-4"
-          dark
-          icon
-        >
-          <v-icon size="24px">{{ socialMedia.icon }}</v-icon>
-        </v-btn>
+        <div>
+          <v-btn
+            :href="socialMedia.link"
+            target="_blank"
+            v-for="socialMedia in socialMedias"
+            :key="socialMedia.link"
+            class="mx-4"
+            dark
+            icon
+          >
+            <v-icon size="24px">{{ socialMedia.icon }}</v-icon>
+          </v-btn>
+        </div>
       </v-card-title>
 
       <v-card-text class="py-2 black--text text-center teal lighten-2">
@@ -29,7 +30,7 @@
 
 <script>
 export default {
-   data: () => ({
+  data: () => ({
     title: "Tiburillo",
     socialMedias: [
       {
@@ -42,6 +43,6 @@ export default {
       }
     ]
   })
-}
+};
 </script>
 

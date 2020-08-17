@@ -3,7 +3,7 @@
     <section>
       <v-parallax src="@/assets/hero3.jpg" height="500">
         <v-layout column align-center justify-center class="white--text">
-          <h1 class="white--text mb-2 display-2">Mary Grace C. Tiburillo</h1>
+          <h1 class="white--text mb-2 text-center display-2">Mary Grace Tiburillo</h1>
           <h3 class="white--text mb-2 overline font-weight-light">Software Developer</h3>
           <v-btn
             class="mt-12"
@@ -21,7 +21,7 @@
       <v-container grid-list-xl>
         <v-layout row wrap align-center class="my-5">
           <v-flex xs12 md6>
-            <v-card class="btn transparent mx-auto" flat max-width="500">
+            <v-card class="border transparent mx-auto" flat max-width="500">
               <v-card max-width="500" class="transparent">
                 <v-img src="@/assets/jpm.jpg"></v-img>
               </v-card>
@@ -44,18 +44,14 @@
     <section>
       <v-parallax src="@/assets/code.jpg" height="380">
         <v-layout column align-center justify-center>
-          <v-card color="transparent" class="px-10" max-width="600">
+          <v-card color="transparent" outlined class="px-10" max-width="600">
             <div class="text-center">
               <v-icon size="100" color="white">mdi-format-quote-close</v-icon>
             </div>
-            <!-- <p
-              class="headline font-weight-thin white--text mb-4 text-center"
-            >Surround yourself with people who challenge you, teach you and push you to be your best self.</p> -->
              <p
               class="headline font-weight-thin white--text mb-4 text-center"
             >Keep exploring and keep learning. Don't be afraid to discover things behind the horizon.</p>
             <br>
-            <!-- <p class="font-italic white--text text-right">- Bill Gates</p> -->
           </v-card>
         </v-layout>
       </v-parallax>
@@ -64,7 +60,7 @@
 </template>
 
 <style lang="scss">
-.btn {
+.border {
   cursor: pointer;
   position: relative;
   padding: 10px 10px;
@@ -95,8 +91,6 @@
   &:hover {
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    // background:rgba(0,0,0,.5);
-    // color:white;
     &:before,
     &:after {
       width: 100%;

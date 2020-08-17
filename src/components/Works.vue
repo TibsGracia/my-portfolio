@@ -1,7 +1,7 @@
 <template>
-  <v-col cols="4">
+  <v-col cols xs="12">
     <v-hover v-slot:default="{ hover }">
-      <v-card :loading="loading" class="mx-auto my-5" max-width="374" :elevation="hover ? 16 : 2">
+      <v-card :loading="loading" class="mx-auto" max-width="374" :elevation="hover ? 16 : 2">
         <v-img height="250" :src="data.image"></v-img>
         <v-card-title>{{data.title}}</v-card-title>
         <v-card-text>
