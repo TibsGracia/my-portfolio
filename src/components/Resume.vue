@@ -8,7 +8,7 @@
       </v-card>
     </v-hover>
     <div class="text-center mt-5">
-      <v-btn dark rounded color="primary" @click="readFile()">Open Resume in Pdf File</v-btn>
+      <v-btn dark rounded color="primary" href="./pdf/myResume.pdf" download>Download Resume</v-btn>
     </div>
   </v-container>
 </template>
@@ -23,10 +23,5 @@ export default {
     bubble1,
     pdf
   },
-  methods: {
-    readFile() {
-      window.open("./pdf/myResume.pdf", "_blank"); //to open in new tab
-    }
-  }
 };
 </script>

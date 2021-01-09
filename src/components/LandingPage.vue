@@ -1,12 +1,16 @@
 <template>
   <div>
     <section>
-      <v-parallax src="@/assets/hero3.jpg" height="500">
+      <v-parallax src="@/assets/hero3.jpg" height="660">
         <v-layout column align-center justify-center class="white--text">
-          <h1 class="white--text mb-2 text-center display-2">Mary Grace Tiburillo</h1>
-          <h3 class="white--text mb-2 overline font-weight-light">Software Developer</h3>
+          <h1
+            class="animate__animated animate__bounceInDown white--text mb-2 text-center display-2"
+          >Mary Grace Tiburillo</h1>
+          <h3
+            class="animate__animated animate__rubberBand white--text mb-2 overline font-weight-light"
+          >Software Developer</h3>
           <v-btn
-            class="mt-12"
+            class="mt-12 infoBtn animate__animated animate__backInUp"
             color="teal darken-1"
             rounded
             dark
@@ -21,7 +25,11 @@
       <v-container grid-list-xl>
         <v-layout row wrap align-center class="my-5">
           <v-flex xs12 md6>
-            <v-card class="border transparent mx-auto" flat max-width="500">
+            <v-card
+              class="animate__animated animate__fadeInDown border transparent mx-auto"
+              flat
+              max-width="500"
+            >
               <v-card max-width="500" class="transparent">
                 <v-img src="@/assets/jpm.jpg"></v-img>
               </v-card>
@@ -48,7 +56,7 @@
             <div class="text-center">
               <v-icon size="100" color="white">mdi-format-quote-close</v-icon>
             </div>
-             <p
+            <p
               class="headline font-weight-thin white--text mb-4 text-center"
             >Keep exploring and keep learning. Don't be afraid to discover things behind the horizon.</p>
             <br>
@@ -96,6 +104,44 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+.animate__animated.animate__rubberBand {
+  --animate-duration: 3s;
+}
+.animate__animated.animate__bounceInDown {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globaly */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+.infoBtn {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
 </style>
